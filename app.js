@@ -21,7 +21,7 @@ formEl.addEventListener("submit", event => {
       if (jsonData.error) {
         const errMessage = document.querySelector("#loginErrorMessage")
         errMessage.innerText = jsonData.error
-        errMessage.innerText.classList.remove("hide")
+        errMessage.classList.remove("hide")
       } else {
         const showUsersButtonEl = document.querySelector(".showUsersButton")
         showUsersButtonEl.classList.remove("hide")
