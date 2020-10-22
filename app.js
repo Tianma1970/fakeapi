@@ -40,7 +40,7 @@ showUsersButtonEl.addEventListener("click", e => {
       const usersList = users
         .map(user => {
           console.log(user)
-          return `<li class="user" data-daniel= ${user.id}>${user.first_name}` + " " + `${user.last_name}<img src="${user.avatar}"></img></li>`
+          return `<li class="user" data-userid= ${user.id}>${user.first_name}</li>`
         })
         .join("")
       usersListEl.innerHTML = usersList
