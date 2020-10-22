@@ -48,13 +48,14 @@ showUsersButtonEl.addEventListener("click", e => {
 })
 
 usersListEl.addEventListener("click", e => {
-  console.log(e.target.dataset.userid)
+  console.log(e.target.dataset.daniel)
   const userId = e.target.dataset.userid
   //fetch single user
+  console.log(`${apiUrl}api/users/${userId}`)
   fetch(`${apiUrl}api/users/${userId}`)
     .then(res => res.json())
     .then(user => {
-      console.log(user.data)
+      console.log(user)
       userInfoContainer.innerHTML = ""
       //fetch the user name
       const name = document.createElement("p")
